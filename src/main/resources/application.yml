@@ -1,0 +1,11 @@
+services:
+  wapi-api:
+    url: https://swapi.dev/api/people/
+graphql:
+  tools:
+    schema-location-pattern: "**/*.graphql"
+  playground:
+    enabled: true
+  servlet:
+    max-query-depth: 5
+    exception-handlers-enabled: true
