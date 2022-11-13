@@ -1,9 +1,9 @@
 package com.graphqlapibackend.graphql.people.client;
 
 import com.graphqlapibackend.graphql.people.dto.PeopleListResponse;
+import com.graphqlapibackend.graphql.people.dto.PersonResponse;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
@@ -18,5 +18,13 @@ public interface PeopleClient {
     Optional<PeopleListResponse> getAllPeople();
 
     @GetMapping
-    Optional<PeopleListResponse> searchByPersonName(@RequestParam("search") String personName);
+    Optional<PeopleListResponse> getAllPeople(@RequestParam("page") int page);
+
+    @GetMapping
+    Optional<PeopleListResponse> searchByPersonName(@RequestParam("search") String name);
+
+    @RequestMapping(value = "{id}", method = RequestMethod.GET)
+    Optional<PersonResponse> searchByPersonID(@PathVariable("id") int id);
+
+
 }

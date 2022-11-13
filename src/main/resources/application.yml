@@ -9,3 +9,5 @@ graphql:
   servlet:
     max-query-depth: 5
     exception-handlers-enabled: true
+server:
+  port: 8090

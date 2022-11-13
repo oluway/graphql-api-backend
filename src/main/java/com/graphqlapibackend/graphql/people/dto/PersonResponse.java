@@ -8,9 +8,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PersonResponse {
+
+    private Integer id;
     private String name;
     private String height;
     private String mass;
     private String gender;
     private String homeworld;
+
+
 }
