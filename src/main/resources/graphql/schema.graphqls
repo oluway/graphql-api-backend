@@ -1,6 +1,6 @@
 type Query {
    peopleList: PeopleListResponse
-   peopleListPaged(page: Int, size: Int): PeopleListResponse
+   peopleListPaged(page: Int): PeopleListResponse
    getPersonByName(name: String): PeopleListResponse
    getPersonByID(id: ID!): PersonResponse
 }
