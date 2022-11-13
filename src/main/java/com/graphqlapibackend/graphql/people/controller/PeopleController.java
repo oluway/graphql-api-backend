@@ -15,12 +15,10 @@ public class PeopleController {
     public PeopleController(PeopleService peopleService) {
         this.peopleService = peopleService;
     }
-
     @GetMapping
     public PeopleListResponse getPeople(){
         return peopleService.getAllPeople();
     }
-
 
     @GetMapping("name/{name}")
     public PeopleListResponse findPersonByName(@PathVariable String name){
@@ -30,6 +28,5 @@ public class PeopleController {
     public Optional<PersonResponse> findPersonByID(@PathVariable int id){
         return peopleService.findPersonByid(id);
     }
-
 
 }

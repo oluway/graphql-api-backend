@@ -7,6 +7,9 @@ type Query {
 
 
 type PeopleListResponse{
+   next: String
+   previous: String
+   count: Int
    results: [PersonResponse]
 }
 

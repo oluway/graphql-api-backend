@@ -22,8 +22,14 @@ public class PeopleService {
             return PeopleListResponse.createEmptyResult();
         }
     }
-    public Optional<PeopleListResponse> getAllPeople(int page) {
-        return peopleClient.getAllPeople(page);
+    public PeopleListResponse getAllPeople(int page) {
+        try {
+            return peopleClient.getAllPeople(page).orElse(PeopleListResponse.createEmptyResult());
+        }catch (Exception ex){
+            ex.printStackTrace();
+            return PeopleListResponse.createEmptyResult();
+        }
+
     }
     public PeopleListResponse findPersonByName(String name) {
         try{

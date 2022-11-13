@@ -23,7 +23,7 @@ public class PeopleGraphQLController {
     }
 
     @QueryMapping
-    public Optional<PeopleListResponse> peopleListPaged(@Argument int page){
+    public PeopleListResponse peopleListPaged(@Argument int page){
         return peopleService.getAllPeople(page);
     }
 

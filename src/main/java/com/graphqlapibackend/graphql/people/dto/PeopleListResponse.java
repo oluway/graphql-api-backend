@@ -11,6 +11,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PeopleListResponse {
+    private String previous;
+    private String next;
     private Integer count;
     private List<PersonResponse> results;
 
