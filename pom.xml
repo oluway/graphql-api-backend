@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.graphql-api-backend</groupId>
-	<artifactId>graphql</artifactId>
+	<artifactId>graphql-api-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>graphql</name>
 	<description>Wrapping Star War API with GraphQL</description>
